@@ -2,7 +2,7 @@ FROM registry.connect.redhat.com/balabit/syslog-ng-ose:latest
 ENV HOME=/tmp/
 
 # install wget
-RUN yum install wget -y
+# RUN yum install wget -y
 
 USER 1001
 
