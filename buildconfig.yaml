@@ -14,7 +14,6 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      dockerfilePath: ./Dockerfile
       from:
         kind: ImageStreamTag
         name: "syslog-ng-ose:latest"
@@ -23,4 +22,5 @@ spec:
     type: Git
     git:
       uri: "https://github.com/michaelshire/sentinel.git"
+    contextDir: sentinelimage
   runPolicy: Serial
