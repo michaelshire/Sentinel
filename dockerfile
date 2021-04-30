@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ubi8:latest
+FROM registry.connect.redhat.com/balabit/syslog-ng-ose:latest
 ENV HOME=/tmp/
 
 # install wget
