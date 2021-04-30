@@ -1,0 +1,29 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: sentinel
+  namespace: sentinel
+spec:
+  lookupPolicy:
+    local: false
+status:
+  dockerImageRepository: 'image-registry.openshift-image-registry.svc:5000/sealed-secrets/sentinel'
+---
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: ubi8
+  namespace: sentinel
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - name: latest
+      annotations:
+        openshift.io/imported-from: 'registry.redhat.io/ubi8:latest'
+      from:
+        kind: DockerImage
+        name: 'registry.redhat.io/ubi8:latest'
+      importPolicy: {}
+      referencePolicy:
+        type: Source
