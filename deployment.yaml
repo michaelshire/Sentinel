@@ -26,7 +26,7 @@ spec:
           resources: {}
           volumeMounts:
             - name: sentinel-workspace
-              mountPath: /var/run/secrets/kubernetes.io/
+              mountPath: /var/run/secrets/kubernetes.io/sentinel-workspace/
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           imagePullPolicy: IfNotPresent
