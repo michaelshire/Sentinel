@@ -1,8 +1,10 @@
 FROM registry.connect.redhat.com/balabit/syslog-ng-ose:latest
 ENV HOME=/tmp/
 
+RUN grep PRETTY_NAME /etc/os-release
 # install wget
 RUN apt-get install wget
+
 
 USER 1001
 
