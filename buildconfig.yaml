@@ -16,7 +16,7 @@ spec:
     dockerStrategy:
       from:
         kind: ImageStreamTag
-        name: "syslog-ng-ose:latest"
+        name: "syslog-ng:latest"
   postCommit: {}
   source:
     type: Git

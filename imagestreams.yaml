@@ -12,7 +12,7 @@ status:
 kind: ImageStream
 apiVersion: image.openshift.io/v1
 metadata:
-  name: syslog-ng-ose
+  name: syslog-ng
   namespace: sentinel
 spec:
   lookupPolicy:
@@ -20,10 +20,10 @@ spec:
   tags:
     - name: latest
       annotations:
-        openshift.io/imported-from: 'registry.connect.redhat.com/balabit/syslog-ng-ose'
+        openshift.io/imported-from: 'balabit/syslog-ng'
       from:
         kind: DockerImage
-        name: 'registry.connect.redhat.com/balabit/syslog-ng-ose:latest'
+        name: 'balabit/syslog-ng:latest'
       importPolicy: {}
       referencePolicy:
         type: Source
