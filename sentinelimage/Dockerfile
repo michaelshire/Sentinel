@@ -1,5 +1,6 @@
 FROM registry.connect.redhat.com/balabit/syslog-ng-ose:latest
 ENV HOME=/tmp/
+WORKDIR /tmp/
 
 # install wget
 RUN apt-get install wget
