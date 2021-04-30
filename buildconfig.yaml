@@ -16,11 +16,10 @@ spec:
     dockerStrategy:
       from:
         kind: ImageStreamTag
-        name: "ubi8:latest"
+        name: "syslog-ng-ose:latest"
   postCommit: {}
   source:
     type: Git
     git:
       uri: "https://github.com/michaelshire/sentinel.git"
-    contextDir: {}
   runPolicy: Serial
